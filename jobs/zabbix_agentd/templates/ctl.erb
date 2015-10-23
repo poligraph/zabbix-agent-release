@@ -7,8 +7,6 @@ PIDFILE=${RUN_DIR}/zabbix_agentd.pid
 case $1 in
 
   start)
-    iptables -A INPUT -p tcp -s <%= properties.zabbix_server_ip %> -j ACCEPT
-    iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 10050 -j ACCEPT
     mkdir -p $RUN_DIR $LOG_DIR
     chown -R vcap:vcap $RUN_DIR $LOG_DIR
 
@@ -27,9 +25,6 @@ case $1 in
     kill `cat $PIDFILE`
 
     rm -f $PIDFILE
-
-    iptables -A INPUT -p tcp -s <%= properties.zabbix_server_ip %> -j DROP
-    iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 10050 -j DROP
 
     ;;
 
