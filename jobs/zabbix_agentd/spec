@@ -1,0 +1,15 @@
+---
+name: zabbix_agentd
+templates:
+  ctl.erb: bin/ctl
+  zabbix_agentd.conf.erb: conf/zabbix_agentd.conf
+packages:
+  - zabbix_agentd
+properties:
+  zabbix_server_ip:
+    description: Address of Zabbix server
+    default: default.altoros.com
+  zabbix_agent_host_metadata:
+    description: agent host metadata
+    default: default.altoros.com
+    
