@@ -1,4 +1,5 @@
 Server=<%= properties.zabbix_server_ip %>
-HostMetadataItem=<%= properties.zabbix_agent_host_metadata %>
+ServerActive=<%= properties.zabbix_server_ip %>
+HostMetadata=<%= properties.zabbix_agent_host_metadata %>
 PidFile=/var/vcap/sys/run/zabbix_agentd/zabbix_agentd.pid
 LogFile=/tmp/zabbix_agentd.log
