@@ -17,5 +17,7 @@ properties:
 ```
 
 Add the template to your job:
-```- {name: zabbix_agentd, release: zabbix_agent}```
+```
+- {name: zabbix_agentd, release: zabbix_agent}
+```
 
