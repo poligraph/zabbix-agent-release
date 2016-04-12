@@ -6,10 +6,10 @@ templates:
 packages:
   - zabbix_agentd
 properties:
-  zabbix_server_ip:
+  zabbix.server_ip:
     description: Address of Zabbix server
     default: default.altoros.com
-  zabbix_agent_host_metadata:
+  zabbix.host_metadata:
     description: agent host metadata
-    default: default.altoros.com
+    default: cf
     

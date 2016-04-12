@@ -1,8 +1,21 @@
 #BOSH release of Zabbix aggent
 
-The job has 2 parameters
-- zabbix_server_ip - Address of Zabbix server
-- zabbix_agent_host_metadata - agent host metadata (you may use it for agent auto-registration)
+add following parameters to your stub
+```
+releases:
+- name: cf
+  version: "230"
+- name: zabbix_agent
+  version: "latest"
+```
+
+```
+properties:
+  zabbix:
+    host_metadata: cf-openstack
+    server_ip: 192.168.111.5
+```
 
 Add the template to your job:
 - {name: zabbix_agentd, release: zabbix_agent}
+

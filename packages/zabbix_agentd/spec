@@ -1,4 +1,4 @@
 ---
 name: zabbix_agentd
 files:
-- zabbix_agents_2.4.4.linux2_6.amd64.tar.gz
+- zabbix_agents_3.0.0.linux2_6_23.amd64.tar.gz

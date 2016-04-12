@@ -1,5 +1,7 @@
-Server=<%= properties.zabbix_server_ip %>
-ServerActive=<%= properties.zabbix_server_ip %>
-HostMetadata=<%= properties.zabbix_agent_host_metadata %>
+Server=<%= properties.zabbix.server_ip %>
+ServerActive=<%= properties.zabbix.server_ip %>
+Hostname=<%= name %>.<%= index %>
+HostMetadata=<%= properties.zabbix.host_metadata %>
+UserParameter=fs.ofiles,cat /proc/sys/fs/file-nr | awk '{print $1}'
 PidFile=/var/vcap/sys/run/zabbix_agentd/zabbix_agentd.pid
-LogFile=/tmp/zabbix_agentd.log
+LogFile=/var/vcap/sys/log/zabbix_agentd/zabbix_agentd.log
